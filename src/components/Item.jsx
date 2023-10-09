@@ -1,8 +1,10 @@
-export const Item = () => {
+export const Item = ({ id, packed, quantity, description }) => {
   return (
     <li>
-      <input type="checkbox" value="" />
-      <span>1 Item</span>
+      <input type="checkbox" />
+      <span style={packed ? { textDecoration: "line-through" } : {}}>
+        {quantity} {description}
+      </span>
       <button>❌</button>
     </li>
   );
