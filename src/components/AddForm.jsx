@@ -4,9 +4,9 @@ export const AddForm = () => {
   const numbers = [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
   ];
-  const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState(1);
-  const handleSubmit = (ev) => {
+  const [description, setDescription] = useState("");
+  const handlerSubmit = (ev) => {
     ev.preventDefault();
     if (description !== "") {
       const newItem = {
@@ -15,16 +15,14 @@ export const AddForm = () => {
         quantity,
         packed: false,
       };
-      console.log(newItem);
+      setDescription("");
+      setQuantity(1);
     }
   };
   return (
-    <form className="add-form" onSubmit={handleSubmit}>
+    <form className="add-form" onSubmit={handlerSubmit}>
       <h3>What do you need for your 🥳 trip ?</h3>
-      <select
-        value={quantity}
-        onChange={(ev) => setQuantity(Number(ev.target.value))}
-      >
+      <select value={quantity} onChange={(ev) => setQuantity(ev.target.value)}>
         {numbers.map((number) => (
           <option value={number} key={number}>
             {number}
