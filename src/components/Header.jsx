@@ -1,3 +1,3 @@
 export const Header = () => {
-  return <h1> FAR AWAY</h1>;
+  return <h1>🛥 Far away 🗺</h1>;
 };
