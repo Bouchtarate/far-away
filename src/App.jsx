@@ -52,7 +52,7 @@ export default function App() {
         onUpdateItems={handleUpdateItems}
         onClearItems={handleClearItems}
       />
-      <State itemsLength={items.length} packed={{ ...items }} />
+      <State itemsLength={items.length} packedLists={{ ...items }} />
     </div>
   );
 }
