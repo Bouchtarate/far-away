@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-export const AddForm = () => {
+export const AddForm = ({ onAddItems }) => {
+  const [quantity, setQuantity] = useState(1);
+  const [description, setDescription] = useState("");
   const numbers = [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
   ];
-  const [quantity, setQuantity] = useState(1);
-  const [description, setDescription] = useState("");
   const handlerSubmit = (ev) => {
     ev.preventDefault();
     if (description !== "") {
@@ -17,6 +17,7 @@ export const AddForm = () => {
       };
       setDescription("");
       setQuantity(1);
+      onAddItems(newItem);
     }
   };
   return (
