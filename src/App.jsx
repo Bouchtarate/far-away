@@ -39,6 +39,9 @@ export default function App() {
       )
     );
   };
+  const handleClearItems = () => {
+    setItems(() => []);
+  };
   return (
     <div className="app">
       <Header />
@@ -47,8 +50,9 @@ export default function App() {
         items={items}
         onDeleteItems={handleDeleteItems}
         onUpdateItems={handleUpdateItems}
+        onClearItems={handleClearItems}
       />
-      <State />
+      <State itemsLength={items.length} packed={{ ...items }} />
     </div>
   );
 }

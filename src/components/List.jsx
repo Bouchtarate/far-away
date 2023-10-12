@@ -1,5 +1,5 @@
 import { Item } from "./Item";
-export const List = ({ items, onDeleteItems, onUpdateItems }) => {
+export const List = ({ items, onDeleteItems, onUpdateItems, onClearItems }) => {
   return (
     <div className="list">
       <ul>
@@ -22,7 +22,7 @@ export const List = ({ items, onDeleteItems, onUpdateItems }) => {
           <option value="description">Sort by description</option>
           <option value="packed">Sort by packed status</option>
         </select>
-        <button>Clear list</button>
+        <button onClick={() => onClearItems()}>Clear list</button>
       </div>
     </div>
   );
