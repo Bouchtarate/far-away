@@ -80,7 +80,6 @@ input {
   background-color: #5a3e2b;
   color: #ffebb3;
   padding: 4rem 0;
-
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -133,4 +132,30 @@ input[type="checkbox"] {
   text-align: center;
   font-weight: 700;
   padding: 3.2rem 0;
+}
+@media screen and (max-width: 930px) {
+  .add-form {
+    padding: 30px 2rem;
+  }
+}
+@media screen and (max-width: 670px) {
+  .emoji {
+    display: none;
+  }
+  .add-form {
+    display: grid;
+    grid-template-columns: 350px;
+    gap: 1.2rem;
+    justify-content: center;
+    align-content: start;
+    text-align: center;
+  }
+  .list li {
+    justify-content: center;
+  }
+  .list .actions {
+    display: grid;
+    grid-template-columns: 250px;
+    gap: 2rem;
+  }
 }

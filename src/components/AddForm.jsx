@@ -22,7 +22,7 @@ export const AddForm = ({ onAddItems }) => {
   };
   return (
     <form className="add-form" onSubmit={handlerSubmit}>
-      <h3>What do you need for your 🥳 trip ?</h3>
+      <h3>What do you need for your 📋 trip ?</h3>
       <select value={quantity} onChange={(ev) => setQuantity(ev.target.value)}>
         {numbers.map((number) => (
           <option value={number} key={number}>
